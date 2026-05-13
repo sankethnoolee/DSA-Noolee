@@ -4,6 +4,8 @@ import java.util.*;
 
 public class LeetCode49 {
     public List<List<String>> groupAnagrams(String[] strs) {
+        //#TODO  HASHING TECHNIQUE
+
         //#Brute force
         List<List<String>> res = new ArrayList<>();
         Map<String,List<String>> uni = new HashMap<>();
