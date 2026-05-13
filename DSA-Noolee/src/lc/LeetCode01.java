@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class LeetCode01 {
     public int[] twoSum(int[] nums, int target) {
         //TODO try new approach
-        //hello
+        //checking account settings
 
         //Brute force
         int [] res= new int[2];
