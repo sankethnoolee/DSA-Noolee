@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class LeetCode01 {
     public int[] twoSum(int[] nums, int target) {
-        //TODO try new approac
+        //TODO try new approach
 
         //Brute force
         int [] res= new int[2];
