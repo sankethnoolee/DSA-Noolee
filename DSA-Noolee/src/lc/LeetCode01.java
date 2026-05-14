@@ -1,12 +1,25 @@
 package lc;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LeetCode01 {
     public int[] twoSum(int[] nums, int target) {
-        //TODO try new approach
-        //checking account settings
+        //This approach is using maps
+        Map<Integer, Integer> numInd = new HashMap<>();
+        for(int i = 0;i<nums.length ; i++){
+            Integer remainder = target - nums[i];
+            if(numInd.containsKey(remainder)){
+                return new int[]{numInd.get(remainder),i};
+            }
+            numInd.put(nums[i],i);
+        }
+        return new int[]{-1,-1};
 
+
+
+        /*
         //Brute force
         int [] res= new int[2];
         for(int i = 0;i<nums.length;i++){
@@ -21,7 +34,7 @@ public class LeetCode01 {
             }
         }
         return res;
-
+        */
         /*
         #This doesnt work since after sorting we'll lose original index
         Arrays.sort(nums);
