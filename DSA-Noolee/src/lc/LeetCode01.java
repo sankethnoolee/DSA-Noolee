@@ -56,6 +56,6 @@ public class LeetCode01 {
         */
     }
     public void test(){
-        System.out.printf("missed commit");
+        System.out.printf("checking git glich commit");
     }
 }
