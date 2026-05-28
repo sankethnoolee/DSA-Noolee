@@ -55,4 +55,7 @@ public class LeetCode01 {
         return res;
         */
     }
+    public void test(){
+        System.out.printf("missed commit");
+    }
 }
