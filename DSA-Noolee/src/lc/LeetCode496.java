@@ -8,16 +8,17 @@ public class LeetCode496 {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         int [] res = new int[nums1.length];
         for(int i = 0;i< nums1.length;i++){
-            boolean match = false;
-            int val = -1;
-            for(int j = 0; j< nums2.length;j++){
-                if(nums1[i]==nums2[j]){
-                    match = true;
-                    val=nums2[j];
+            int index = -1;
+            for(int j = 0; j < nums2.length; j++) {
+                if(nums2[j] == nums1[i]) {
+                    index = j;
+                    break;
                 }
-                if(match && nums2[j]>val){
+            }
+            res[i]= -1;
+            for(int j = index+1; j< nums2.length;j++){
+                if(nums2[j]>nums1[i]){
                     res[i]=nums2[j];
-                    val = -1;
                     break;
                 }
                 res[i]=-1;
