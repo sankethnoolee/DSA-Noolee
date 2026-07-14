@@ -1,4 +1,4 @@
-import java.math.BigInteger;
+package lc;
 
 public class LeetCode342 {
     public boolean isPowerOfFour(int n) {
