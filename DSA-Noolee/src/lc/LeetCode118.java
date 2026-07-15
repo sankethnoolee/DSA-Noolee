@@ -1,0 +1,26 @@
+package lc;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class LeetCode118 {
+    public List<List<Integer>> generate(int numRows) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (numRows<=0) {
+            return res;
+        }
+        for(int i = 0; i<numRows;i++){
+            List<Integer> row = new ArrayList<>();
+            for(int j = 0;j<=i;j++){
+                if(j==0||j==i){
+                    row.add(1);
+                }else{
+                    List<Integer> prevRow = res.get(i-1);
+                    row.add(prevRow.get(j-1)+prevRow.get(j));
+                }
+            }
+            res.add(row);
+        }
+        return res;
+    }
+}
