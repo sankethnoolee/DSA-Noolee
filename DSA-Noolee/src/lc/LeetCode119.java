@@ -5,6 +5,8 @@ import java.util.List;
 
 public class LeetCode119 {
     public List<Integer> getRow(int rowIndex) {
+        //can do by ncr as well -- 0->1c0, 1->1c0:1c1, 2->2c0:2c1:2c2 so on
+
         List<List<Integer>> res = new ArrayList<>();
         /*if(rowIndex==0){
             return new ArrayList<>();
