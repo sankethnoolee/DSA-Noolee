@@ -3,6 +3,20 @@ package lc;
 public class LeetCode3014 {
     //BRUTE FORCE
     public int minimumPushes(String word) {
+        /*
+        * same simplified
+        *
+        int count = 0;
+        int l = word.length();
+        int round = 1;
+        while(l>0){
+            int cur = Math.min(8,l);
+            count += cur*round;
+            l-=cur;
+            round++;
+        }
+        return count;
+        * */
         int count = 0;
         int l = word.toCharArray().length;
         int round = 1;
