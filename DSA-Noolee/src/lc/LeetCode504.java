@@ -1,0 +1,7 @@
+package lc;
+
+public class LeetCode504 {
+    public String convertToBase7(int num) {
+        return Integer.toString(num, 7);
+    }
+}
